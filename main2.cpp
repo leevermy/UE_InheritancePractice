@@ -38,7 +38,7 @@ class Parrot : public Animal {
         }
 };
 
-
+// заполнение вектора можно было сделать через while и push_back(), но решил пойти таким путём
 void AddAnimals(std::vector<std::shared_ptr<Animal>>& animals) {
     char ch;
     for (auto& an : animals) {
@@ -71,8 +71,6 @@ int main() {
     int animals_amount;
     std::cin >> animals_amount;
 
-    // заполнение вектора можно было сделать через while и push_back(),
-    // но решил пойти таким путём
     std::vector<std::shared_ptr<Animal>> animals (animals_amount);
     AddAnimals(animals);
     
